@@ -2,33 +2,32 @@
 
 Press a hotkey and draw on whichever monitor your mouse is on. Runs in the system tray.
 
-| Key | Action |
-| --- | --- |
-| `Ctrl+Shift+D` | Start drawing on the monitor under the mouse / stop drawing (clears marks) |
-| `Esc` | Stop drawing (clears marks) |
-| `Ctrl+Z` | Undo last stroke |
-| `C` | Clear all strokes, keep drawing |
-| `Ctrl+C` | Copy a screenshot of the monitor (with drawings) to the clipboard |
-| `Ctrl+Alt+Shift+Q` | **Emergency quit** — instantly kills the app, works even if it hangs |
+| Key                | Action                                                                     |
+| ------------------ | -------------------------------------------------------------------------- |
+| `Ctrl+Shift+D`     | Start drawing on the monitor under the mouse / stop drawing (clears marks) |
+| `Esc`              | Stop drawing (clears marks)                                                |
+| `Ctrl+Z`           | Undo last stroke                                                           |
+| `C`                | Clear all strokes, keep drawing                                            |
+| `Ctrl+C`           | Copy a screenshot of the monitor (with drawings) to the clipboard          |
+| `Ctrl+Alt+Shift+Q` | **Emergency quit** — instantly kills the app                               |
 
 You can also right-click the tray icon → Exit.
 
 ## Showing drawings in OBS (Browser Source)
 
 Screen Draw serves a transparent page at `http://localhost:7878/` that mirrors your strokes live.
-(Tray icon → *Copy OBS Browser Source URL* copies it.)
+(Tray icon → _Copy OBS Browser Source URL_ copies it.)
 
 1. In your OBS scene, add **Sources → + → Browser**.
 2. URL: `http://localhost:7878/`. Set **Width/Height to your monitor's resolution** (e.g. 1920 × 1080).
 3. Put it **above** your Game/Window Capture in the source list and make both fill the canvas.
-   Strokes line up 1:1 with the monitor.
 4. Multiple monitors? Use `http://localhost:7878/?screen=2` to only show drawings made on display 2
-   (the number from Windows *Display settings*).
+   (the number from Windows _Display settings_).
 
-The overlay can't draw on top of a game in *exclusive* fullscreen, so set the game to
+The overlay can't draw on top of a game in _exclusive_ fullscreen, so set the game to
 borderless/windowed fullscreen.
 
-OBS **Display Capture** also records the overlay directly, if you can use it.
+OBS **Display Capture** also records the overlay directly.
 
 ## Build
 
